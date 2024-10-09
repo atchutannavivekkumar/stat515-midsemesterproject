@@ -8,21 +8,26 @@ The data used for the analysis and visualizations in this report have been sourc
 
 ![](project1oggraph.jpeg){width="690" height="624"}
 
+[1] data set is taken from
+
 The initial scatter plot, which shows how gross job gains and losses are represented visually across the states in the United States. Each state is represented by a coloured square, and the x-axis shows job losses and the y-axis shows job gains. A thick legend at the top of the plot indicates which colours correspond to which states.
 
 # Problems in the scatter plots:
 
-1.  Cluttered Legend:
+1.Cluttered Legend:
+The legend in the scatter plot has too many states, each represented by a different colour. The labels of some states are even reduced , making it challenging to determine which states the colours correspond to. The excessive range of colours produces a jumbled image that makes viewers constantly consult the legend. A good legend should have clear distinguish between the colour patterns used and positions, title of legend, ordering of the legends [2] .
 
-    The legend in the scatter plot has too many states, each represented by a different colour. The labels of some states are even reduced , making it challenging to determine which states the colours correspond to. The excessive range of colours produces a jumbled image that makes viewers constantly consult the legend. A good legend should have clear distinguish between the colour patterns used and positions, title of legend, ordering of the legends \[1\] .
+2. Data Overlap: 
+A large number of the data points, which indicate states with lower job gains and losses, are closely clustered in the graph's lower left corner. This causes visual congestion, which makes it challenging to distinguish between different states. Viewers might find it difficult to derive significant conclusions from the scatter plot if states with comparable data are not clearly distinguished from one another [3].
 
-2.  Data Overlap: A large number of the data points, which indicate states with lower job gains and losses, are closely clustered in the graph's lower left corner. This causes visual congestion, which makes it challenging to distinguish between different states. Viewers might find it difficult to derive significant conclusions from the scatter plot if states with comparable data are not clearly distinguished from one another.
+3. Lack of Geographic Context:
+One of the main limitations of the scatter plot is that it does not provide a geographic representation of the states. Viewers are missing out on possible regional trends and patterns if they are unable to determine the locations of these states. For instance, it can be challenging to determine whether job growth and losses are concentrated in particular regions of the nation. Visualization use ranges from a single, private user to a large, public audience [3].
 
-3.  Lack of Geographic Context: One of the main limitations of the scatter plot is that it does not provide a geographic representation of the states. Viewers are missing out on possible regional trends and patterns if they are unable to determine the locations of these states. For instance, it can be challenging to determine whether job growth and losses are concentrated in particular regions of the nation. Visualization use ranges from a single, private user to a large, public audience \[2\].
+4. Interpreting the Scale: 
+Although the scatter plot has linear scales for job gains and losses, it lacks significant annotations or that would aid viewers in rapidly determining the extent of state-to-state variations. Lack of such context makes it more difficult to quickly understand the connections between job gains and losses [4].
 
-4.  Interpreting the Scale: Although the scatter plot has linear scales for job gains and losses, it lacks significant annotations or that would aid viewers in rapidly determining the extent of state-to-state variations. Lack of such context makes it more difficult to quickly understand the connections between job gains and losses \[3\].
-
-5.  Simplified Colour Scheme: In contrast to the scatter plot, the color scheme in the Choropleth Map is more organized and controllable. States are categorized into color-coded groups according to job gain ranges rather than having individual colors. Because viewers can quickly scan the map and understand the relative job growth in each state without having to cross-reference a legend, this simplification facilitates easier interpretation \[4\].
+5. Simplified Colour Scheme: 
+In contrast to the scatter plot, the color scheme in the Choropleth Map is more organized and controllable. States are categorized into color-coded groups according to job gain ranges rather than having individual colors. Because viewers can quickly scan the map and understand the relative job growth in each state without having to cross-reference a legend, this simplification facilitates easier interpretation [5].
 
 Firstly, it presents the data in a visually appealing manner that is relevant to geography, making it easy for viewers to spot regional patterns and trends in job growth. An immediate comprehension of the job gain magnitudes across states is provided by the addition of quantitative ranges adjacent to the colour scale, which further improves clarity. Last but not least, the choropleth map presents a more orderly visual hierarchy by emphasizing the states that are most crucial for job growth without having overlapping data points to distract the viewer.
 
@@ -62,3 +67,89 @@ We used map plot because in data set we have data of united states of america an
 **Why this is better than other plot:**
 
 USA Map is better because it uses a color-coded map to provide an obvious and simple-to-understand representation of job gains across U.S. states. This makes quickly observing regional trends easy. There is no need to cross-reference a complicated legend because the color scale is directly connected to the job gain numbers. Alternatively, a scatter plot makes it more difficult to quickly interpret job gains and losses because it has a lot of overlapping data points and an unreadable legend. Better geographic clarity and context can be found on the map found in USA Map.
+
+Works Cited
+
+   
+
+    
+
+    
+
+[1] 
+
+    
+
+    
+
+    
+
+" Gross job gains and gross job losses, by state,    seasonally adjusted," [Online]. Available:    https://www.bls.gov/charts/business-employment-dynamics/gross-job-gains-gross-job-losses-by-state.htm.    [Accessed October 2024].
+
+    
+
+   
+
+   
+
+    
+
+    
+
+[2] 
+
+    
+
+    
+
+    
+
+S. Tselova, "Rethinking chart legends: when and how    to use them?," June 2024. [Online]. Available:    https://flourish.studio/blog/legend-colors-in-header/. [Accessed 5 October    2024].
+
+    
+
+   
+
+   
+
+    
+
+    
+
+[3] 
+
+    
+
+    
+
+    
+
+T. Bock, "What is Overplotting?," [Online].    Available:    https://www.displayr.com/what-is-overplotting/#:~:text=Overplotting%20is%20when%20the%20data,unique%20values%20in%20the%20dataset..    [Accessed 5 October 2024].
+
+    
+
+   
+
+   
+
+    
+
+    
+
+[4] 
+
+    
+
+    
+
+    
+
+"Visualization of geographical data.," [Online].    Available: https://volaya.github.io/gis-book/en/Visualization.html.    [Accessed 5 October 2024].
+
+    
+
+   
+
+  
+
+

@@ -174,35 +174,38 @@ window.Quarto = {
 </header>
 
 
-<p>#libraries </p>  <\n> <p> library(tidyverse)</p> <\n> <p> library(dplyr)</p> <br /> <p>library(readr)</p> <br /> <p>library(maps)</p> <br /> <p>library(mapproj)</p> <br /> <p>library(plotly)</p> <br />
-<p>#theme hw &lt;- theme_gray()+ theme( plot.title=element_text(hjust=0.5), plot.subtitle=element_text(hjust=0.5), plot.caption=element_text(hjust=-.5),</p>
+<h2>#libraries </h2> <br /> <p> library(tidyverse)</p> <\n> <p> library(dplyr)</p> <br /> <p>library(readr)</p> <br /> <p>library(maps)</p> <br /> <p>library(mapproj)</p> <br /> <p>library(plotly)</p> <br />
+<h2>#theme </h2> <br/> <p> hw &lt;- theme_gray()+ theme( plot.title=element_text(hjust=0.5), plot.subtitle=element_text(hjust=0.5), plot.caption=element_text(hjust=-.5),</p>
 <p>strip.text.y = element_blank(), strip.background=element_rect(fill=rgb(.9,.95,1), colour=gray(.5), linewidth =.2),</p>
 <p>panel.border=element_rect(fill=FALSE,colour=gray(.70)), panel.grid.minor.y = element_blank(), panel.grid.minor.x = element_blank(), panel.spacing.x = unit(0.10,“cm”), panel.spacing.y = unit(0.05,“cm”),</p>
 <p># axis.ticks.y= element_blank() axis.ticks=element_blank(), axis.text=element_text(colour=“black”), axis.text.y=element_text(margin=margin(0,3,0,3)), axis.text.x=element_text(margin=margin(-1,0,3,0)) )</p>
-<p>#load state abbrevations states &lt;- read.csv(“statess.csv”)</p>
-<p>#load data and cbind abbrevations job &lt;- read.csv(“dataset1.csv”) %&gt;% inner_join(states, by.x = states, by.y = state)</p>
-<p>joba &lt;- cbind(job, Abbreviation = states$Abbreviation)</p>
-<p>ggplot(data = joba, aes(x=State, y=job_loss))+ geom_bar(stat=“identity”, color=“blue”, fill=“white”)</p>
+<p>#load state abbrevations states &lt;- read.csv(“statess.csv”)</p> <br/>
+<p>#load data and cbind abbrevations job &lt;- read.csv(“dataset1.csv”) %&gt;% inner_join(states, by.x = states, by.y = state)</p> <br />
+<p>joba &lt;- cbind(job, Abbreviation = states$Abbreviation)</p> <br />
+<br />
+  <h2> GG Plot</h2><br />
+<p>ggplot(data = joba, aes(x=State, y=job_loss))+ geom_bar(stat=“identity”, color=“blue”, fill=“white”)</p><br />
 <p>#changing column names names(joba) names(joba) [2] &lt;- “job_loss” names(joba) [3] &lt;- “job_gains”</p>
-<p>#bar graph in plotly</p>
-<p>plot_ly( data = joba, x= ~State, y = ~job_loss, type = “bar”, name = “Job loss” ) %&gt;% add_trace(y=~job_gains, name = “job gain”)</p>
-<p>#map bar of job loss</p>
-<p>states &lt;- map_data(“state”)</p>
-<p>view(states) rm(joba)</p>
-<p>joba<span class="math inline">\(State &lt;- tolower(joba\)</span>State) joba<span class="math inline">\(job_losses =  joba\)</span>job_loss / 100 usa_jobloss &lt;- usa_tbl %&gt;% left_join(joba, by = c(“region”= “State”))%&gt;%</p>
-<p>usa_jobloss</p>
-<p>usa_jobloss %&gt;% ggplot(aes(long, lat, group = group)) + geom_map( aes(map_id = region), map = usa_tbl, color = “gray80”, fill = “gray30”, size = 0.3)+ coord_map(“ortho”, orientation = c(39, -98, 0)) + geom_polygon(aes( fill = job_loss), color = “black”) + theme_minimal() + labs( title = “Job Loss in USA”,x = ““, y =”“, fill =”Job Loss per state”) + theme( plot.title = element_text(size = 26, face = “bold”, color = “blue”), legend.position = “left”)</p>
-<p>usa_jobloss %&gt;% ggplot(aes(long, lat, group = group)) + geom_map( aes(map_id = region), map = usa_tbl, color = “gray80”, fill = “gray30”, size = 0.3)+ coord_map(“ortho”, orientation = c(39, -98, 0)) + geom_polygon(aes( fill = job_gains), color = “black”) + theme_minimal() + labs( title = “Job Gain in USA”,x = ““, y =”“, fill =”Job gain per state”) + theme( plot.title = element_text(size = 26, face = “bold”, color = “blue”), legend.position = “left”)</p>
-<p>#dataset1 completed</p>
-<p>datasett &lt;- read.csv(“dataset3.csv”)</p>
-<p>rm(dataset)</p>
-<p>#to remove null values</p>
-<p>dataset &lt;- na.omit(datasett)</p>
-<p>names(dataset) names(dataset)[4] &lt;- “Employment_level”</p>
-<p>#bar chart with hours output in industry plot_ly( data = dataset, x= ~Industry, y = ~Hours, type = “bar”, name = “Hours” ) %&gt;% add_trace(y=~Output, name = “Output”)</p>
-<p>plot_ly( data = dataset, x= ~Industry, y = ~Employment_level, type = “bar”, name = “Employment level” )</p>
-<p>plot_ly( data = dataset, y= ~Hours, type = “scatter”, mode = ‘scatt’, name = “Hours” )%&gt;% add_trace(y=~Output, name = “Output”,mode =“lines+markers”)</p>
-<p>plot_ly( data = dataset, y= ~Employment_level, type = “scatter”, mode = ‘lines’, name = “Hours” )</p>
+<h2>#bar graph in plotly</h2> <br />
+<p>plot_ly( data = joba, x= ~State, y = ~job_loss, type = “bar”, name = “Job loss” ) %&gt;% add_trace(y=~job_gains, name = “job gain”)</p><br />
+<p>#map bar of job loss</p><br />
+<p>states &lt;- map_data(“state”)</p><br />
+<p>view(states) rm(joba)</p><br />
+<p>joba<span class="math inline">\(State &lt;- tolower(joba\)</span>State) joba<span class="math inline">\(job_losses =  joba\)</span>job_loss / 100 usa_jobloss &lt;- usa_tbl %&gt;% left_join(joba, by = c(“region”= “State”))%&gt;%</p><br />
+<p>usa_jobloss</p> <br />
+<p>usa_jobloss %&gt;% ggplot(aes(long, lat, group = group)) + geom_map( aes(map_id = region), map = usa_tbl, color = “gray80”, fill = “gray30”, size = 0.3)+ coord_map(“ortho”, orientation = c(39, -98, 0)) + geom_polygon(aes( fill = job_loss), color = “black”) + theme_minimal() + labs( title = “Job Loss in USA”,x = ““, y =”“, fill =”Job Loss per state”) + theme( plot.title = element_text(size = 26, face = “bold”, color = “blue”), legend.position = “left”)</p> <br />
+<p>usa_jobloss %&gt;% ggplot(aes(long, lat, group = group)) + geom_map( aes(map_id = region), map = usa_tbl, color = “gray80”, fill = “gray30”, size = 0.3)+ coord_map(“ortho”, orientation = c(39, -98, 0)) + geom_polygon(aes( fill = job_gains), color = “black”) + theme_minimal() + labs( title = “Job Gain in USA”,x = ““, y =”“, fill =”Job gain per state”) + theme( plot.title = element_text(size = 26, face = “bold”, color = “blue”), legend.position = “left”)</p><br />
+<h2>#dataset1 completed</h2> <br />
+<p>datasett &lt;- read.csv(“dataset3.csv”)</p><br />
+<p>rm(dataset)</p><br />
+<h2>#to remove null values</h2><br />
+<p>dataset &lt;- na.omit(datasett)</p><br />
+<p>names(dataset) names(dataset)[4] &lt;- “Employment_level”</p><br />
+<h2>#bar chart with hours output in industry </h2> <br />
+<p>plot_ly( data = dataset, x= ~Industry, y = ~Hours, type = “bar”, name = “Hours” ) %&gt;% add_trace(y=~Output, name = “Output”)</p><br />
+<p>plot_ly( data = dataset, x= ~Industry, y = ~Employment_level, type = “bar”, name = “Employment level” )</p><br />
+<p>plot_ly( data = dataset, y= ~Hours, type = “scatter”, mode = ‘scatt’, name = “Hours” )%&gt;% add_trace(y=~Output, name = “Output”,mode =“lines+markers”)</p><br />
+<p>plot_ly( data = dataset, y= ~Employment_level, type = “scatter”, mode = ‘lines’, name = “Hours” )</p><br />
 
 
 

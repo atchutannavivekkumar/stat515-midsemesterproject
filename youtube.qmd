@@ -2,4 +2,4 @@
 title: "Youtube Video"
 ---
 
-{{< video https://youtu.be/4LU9bSfwrJs >}}
+{{< video https://youtu.be/4LU9bSfwrJs width="400" height="300">}}

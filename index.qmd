@@ -1,0 +1,22 @@
+---
+title: "Harshitha Singannagari"
+image: img.jpg
+about:
+  template: jolla
+  image-shape: round
+  image-width: 18em
+ 
+format:
+  html:
+    css: styles.css
+---
+
+::: highlight
+I am **Harshitha Singannagari**, a dedicated and passionate data enthusiast, currently pursuing my Master’s in Data Analytical Engineering at George Mason University. With a strong academic foundation in data science, statistics, operations research, and computer science, I am committed to leveraging my analytical and technical skills to solve complex, real-world challenges.
+
+Throughout my academic journey and professional internships, I have gained extensive experience in areas such as machine learning, predictive modeling, data visualization, and statistical analysis. My hands-on experience includes working on projects like building recommendation systems, forecasting models, and analyzing large datasets to extract actionable insights. Whether it's optimizing building temperature for energy efficiency or predicting taxi trip durations through machine learning models, I thrive on tackling problems with precision and creativity.
+
+In addition to my technical skills, I possess strong interpersonal and leadership abilities, allowing me to collaborate effectively in team environments and communicate complex data insights to diverse audiences. I’m passionate about continuous learning, staying up-to-date with industry trends, and applying the latest tools and technologies to drive data-driven decision-making.
+
+I am eager to bring my unique blend of skills and enthusiasm to new challenges, where I can contribute to impactful projects and deliver meaningful results.
+:::
